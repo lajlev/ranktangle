@@ -2,5 +2,5 @@
   %hr
   .row
     .twelve.columns
-
-      = debug params
+      - if Rails.env.development?
+        = debug params
