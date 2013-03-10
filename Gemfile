@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'jquery-rails'
-gem "slim-rails"
+gem "haml-rails"
 gem 'devise'
-
+gem 'simple_form'
 
 group :production, :staging do
   gem "pg"

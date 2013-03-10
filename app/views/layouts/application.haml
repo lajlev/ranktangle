@@ -1,0 +1,24 @@
+!!! 5
+%html
+  %head
+    %title Ranktangle
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport"}
+
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application", "vendor/custom.modernizr"
+    = csrf_meta_tags
+
+  %body
+    = render 'layouts/header'
+    .row
+      .twelve.columns
+        - flash.each do |name, msg|
+          .alert-box{:class => name, "data-alert" => ""}
+            = msg
+            = link_to "×", "#", class: "close"
+
+
+
+        = yield
+
+    = render 'layouts/footer'
