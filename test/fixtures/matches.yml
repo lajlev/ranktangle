@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  winners: MyString
+  loosers: MyString
+
+two:
+  winners: MyString
+  loosers: MyString

@@ -1,10 +1,15 @@
 Ranktangle::Application.routes.draw do
+
   root :to => "pages#home"
 
   devise_for :users
 
-  get 'about' => "pages#about"
+  resources :matches
 
+  get 'users' => "users#index"
+  get "users/:id" => "users#show", :as => :user
+
+  get 'about' => "pages#about"
 
 
   # The priority is based upon order of creation:
